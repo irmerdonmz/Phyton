@@ -19,6 +19,15 @@ Output: 2, 1
 """
 from typing import List, Tuple
 
+list1 =[2, 2, 1, 1, 1, 2, 2]
+list2=[3, 2, 3]
+list3=[3, 3, 2, 2, 3, 3, 1]
 
 def major_and_minor_elem(inp: List) -> Tuple[int, int]:
-    ...
+    Tuple = list1, list2, list3
+    for mostLeastCommon in Tuple:
+        most_common_list = max(set(mostLeastCommon), key=mostLeastCommon.count)
+        least_common_list = min(set(mostLeastCommon), key=mostLeastCommon.count)
+        print(most_common_list, least_common_list)
+
+major_and_minor_elem(Tuple)
