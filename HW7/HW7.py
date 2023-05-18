@@ -35,7 +35,7 @@ session.add_all([film1, film2, film3])
 session.commit()
 
 # Update one film
-film = session.query(Film).filter_by(title='Star Wars: Episode I - The Phantom Menace').first()
+film = session.query(Film).filter_by(title='The Godfather').first()
 
 if film is not None:
     film.director = 'George Lucas'
