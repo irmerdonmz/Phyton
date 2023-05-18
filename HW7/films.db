@@ -1,5 +1,4 @@
-SQLite format 3
-tablefilmsfilms CREATE TABLE films (
+tablefilms CREATE TABLE films (
 	id INTEGER NOT NULL, 
 	title VARCHAR, 
 	director VARCHAR, 
