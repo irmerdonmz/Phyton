@@ -23,7 +23,7 @@ link = driver.current_url
 print(driver.current_url)
 
 #check that current URL and expected URL (https://www.saucedemo.com/inventory.html, for example) are the same
-assert "https://www.saucedemo.com/inventory.htmla" in link
+assert "https://www.saucedemo.com/inventory.html" in link
 if "https://www.saucedemo.com/inventory.html" in link:
     print("Pass")
 else:
