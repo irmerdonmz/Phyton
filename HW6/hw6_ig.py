@@ -4,21 +4,24 @@
 # don't use third-party libraries
 
 def merge_elems(*elems):
-    pass
     for elem in elems:
-        if isinstance(elem, (list, tuple)):
-            yield from merge_elems(*elem)
-        elif isinstance(elem, str):
+        if isinstance(elem, str):
             yield from elem
+        elif isinstance(elem, (list, tuple, set)):
+            yield from merge_elems(*elem)
+        elif isinstance(elem, dict):
+            yield from merge_elems(*elem.values())
         else:
             yield elem
+
 # example input
 a = [1, 2, 3]
 b = 6
 c = 'zhaba'
 d = [[1, 2], [3, 4]]
+e = 'one', 'two'
 
-for elem in merge_elems(a, b, c, d):
+for elem in merge_elems(a, b, c, d, e):
     print(elem, end=' ')
 
 # output: 1 2 3 6 z h a b a 1 2 3 4
