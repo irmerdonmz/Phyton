@@ -1,5 +1,3 @@
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckDriverManager
 
 def get_driver_path_with_browser_name(browser_name):
     if browser_name.lower == 'chrome':

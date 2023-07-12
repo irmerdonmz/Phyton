@@ -1,7 +1,7 @@
 
 *** Settings ***
 Library SeleniumLibrary
-Resource  resources.robot
+
 
 *** Variables ***
 ${url}      https://www.demoblaze.com/
